@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>PHẠM CÔNG TOÀN</title>
+  <style>
+    :root{
+      --overlay: rgba(0,0,0,0.45);
+      --card-bg: rgba(255,255,255,0.96);
+      --accent: #1877f2;
+      --radius: 20px;
+      font-family: 'Inter', system-ui, sans-serif;
+    }
+    *{box-sizing:border-box}
+    body,html{height:100%;margin:0}
+    .bg{position:fixed;inset:0;background-image:url('https://images.unsplash.com/photo-1503264116251-35a269479413?auto=format&fit=crop&w=1600&q=80');background-size:cover;background-position:center;filter:brightness(0.8);z-index:-2}
+    .bg::after{content:'';position:fixed;inset:0;background:var(--overlay);z-index:-1}
+    .container{min-height:100%;display:flex;align-items:center;justify-content:center;padding:40px}
+    .card{width:100%;max-width:900px;background:var(--card-bg);border-radius:var(--radius);box-shadow:0 10px 30px rgba(0,0,0,0.3);overflow:hidden;display:grid;grid-template-columns:340px 1fr}
+    .left{padding:30px;background:linear-gradient(180deg,rgba(255,255,255,0.05),rgba(255,255,255,0));backdrop-filter: blur(5px);display:flex;flex-direction:column;align-items:center;gap:20px;border-right:1px solid rgba(0,0,0,0.05)}
+    .avatar{width:180px;height:180px;border-radius:18px;overflow:hidden;border:4px solid rgba(255,255,255,0.7)}
+    .avatar img{width:100%;height:100%;object-fit:cover}
+    .name{font-size:1.8rem;font-weight:700;margin:0;text-align:center}
+    .role{color:#555}
+    .chunho{font-size: 8px;opacity: 2;text-align: center;}
+    .contact{display:flex;gap:10px;margin-top:10px}
+    .social-btn{display:inline-flex;align-items:center;gap:6px;padding:9px 14px;border-radius:14px;text-decoration:none;font-weight:600;font-size:0.9rem}
+    .fb{background:var(--accent);color:white}
+    .zl{background:#00a67e;color:white}
+    .right{padding:30px}
+    h2{margin-top:0;font-size:1.3rem}
+    p.lead{color:#333;font-size:1rem;line-height:1.6;margin-top:6px}
+    .info{margin-top:20px;display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px}
+    .item{background:white;padding:14px;border-radius:12px;box-shadow:0 4px 10px rgba(0,0,0,0.05)}
+    .footer{margin-top:24px;color:#444;font-size:0.92rem;line-height:1.4}
+    @media(max-width:800px){.card{grid-template-columns:1fr}.left{border-right:none;border-bottom:1px solid rgba(0,0,0,0.06)}.avatar{width:140px;height:140px}}
+  </style>
+</head>
+<body>
+  <div class="bg" aria-hidden="true"></div>
+  <div class="container">
+    <article class="card" role="main">
+      <section class="left">
+        <div class="avatar-wrap" style="text-align:center;">
+  <img src="https://i.postimg.cc/XJzxbT9F/unnamed-1.jpg"
+       style="width:180px;height:180px;border-radius:20px;object-fit:cover;display:block;margin:0 auto;">
+  <div style="font-size:10px;opacity:.55;padding-top:5px;">
+    (Hình Ảnh Chỉ Mang Tính Chất Minh Hoạ)
+  </div>
+</div>
+
+        <div style="text-align:center">
+          <h1 class="name">Phạm Công Toàn</h1>
+          <div class="role">20.11.2001 (Tân Tỵ 🐍)</div>
+          <div> Mệnh Kim 💰 / Cung Bọ Cạp ♏️</div>
+        </div>
+
+        <div class="contact" role="navigation" aria-label="Liên kết mạng xã hội">
+          <!-- Thay link FB và Zalo vào href -->
+          <a class="social-btn fb" href="https://www.facebook.com/share/17HeJi9ANa/" target="_blank" rel="noopener noreferrer">
+            <!-- SVG Facebook icon -->
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden><path d="M22 12.07C22 6.51 17.52 2 12 2S2 6.51 2 12.07c0 5.02 3.66 9.17 8.44 9.93v-7.03H7.9v-2.9h2.54V9.86c0-2.5 1.49-3.88 3.77-3.88 1.09 0 2.23.2 2.23.2v2.45h-1.25c-1.23 0-1.61.77-1.61 1.56v1.87h2.74l-.44 2.9h-2.3v7.03C18.34 21.24 22 17.09 22 12.07z" fill="currentColor"/></svg>
+            Facebook
+          </a>
+
+          <a class="social-btn zl" href="https://zalo.me/0337498964" target="_blank" rel="noopener noreferrer">
+            <!-- Simple Zalo icon (chat bubble) -->
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden><path d="M12 2C6.48 2 2 5.92 2 10.5c0 2.63 1.69 5 4.44 6.6V22l3.05-1.67c.9.24 1.84.37 2.51.37 5.52 0 10-3.92 10-8.5S17.52 2 12 2z" fill="currentColor"/></svg>
+            Zalo
+          </a>
+        </div>
+
+        <div style="margin-top:auto;font-size:0.9rem;color:#555; text-align:center">
+          <div>📍 Hải Phòng</div>
+          <div>✉️ 0396101452toan@gmail.com</div>
+        </div>
+      </section>
+
+      <section class="right">
+        <h2>Mục tiêu nghề nghiệp:</h2>
+        <p class="lead">Mong muốn học hỏi thêm kinh nghiệm trong môi trường làm việc năng động và sáng tạo của công ty Có cơ hội thăng tiến và phát triển cho Bản Thân và Công Ty.</p>
+
+        <div class="info">
+          <div class="item">
+            <strong>HỌC VẤN</strong>
+            <div>THỜI GIAN: 08/2019~06/2022</div>
+            <div>Chuyên ngành học: Kỹ Thuật Máy Lạnh Và Điều Hoà Không Khí (Cao Đẳng Kinh Tế - Kĩ Thuật Bắc Bộ)</div>
+            <div>Loại tốt nghiệp: Khá</div>
+          </div>
+          <div class="item">
+            <strong>KINH NGHIỆM LÀM VIỆC</strong>
+            <div>Thợ Cỏ (10/2019~Hiện tại).</div>
+            <div>Nhân Viên bảo trì hệ Thống Lạnh tại Devyt Tobacco Hải Phòng(06/2023~05/2024).</div>
+            <div>Thợ Điện Máy(FPT Hải Phòng 05/2024~12/2024).</div>
+            <div>Nhân Viên bảo trì hệ Thống Lạnh tại Ohsungvina Hải Phòng (01/2025~Hiện tại).</div>
+          </div>
+          <div class="item">
+            <strong>Sở thích</strong>
+            <div>Tìm tòi - khám phá - Chinh phục những kiến thức và công việc bản thân chưa biết.</div>
+          </div>
+          <div class="item">
+            <strong>Kỹ năng</strong>
+            <div>Làm việc nhóm,</div>
+            <div>chịu được áp lực,</div>
+            <div>quản lý thời gian,</div>
+            <div>lắng nghe và chủ động,</div>
+            <div>giải quyết vấn đề</div>
+          </div>
+        </div>
+
+        <div class="footer">
+            <p>TIN HỌC Words ⭐️⭐️⭐️⭐️ Excel ⭐️⭐️⭐️⭐️ Power Point ⭐️⭐️⭐️⭐️ Outlook ⭐️⭐️⭐️⭐️</p>
+            <p>Phần mềm khác: Xampp - Visual - Html - javascript - C# </p>
+            <p> Một số phần mềm cần thiết khác...</p>
+        </div>
+      </section>
+    </article>
+  </div>
+</body>
+</html>
